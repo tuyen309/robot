@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.10.0 on win32)" generated="20220104 11:08:26.708" rpa="false" schemaversion="2">
+<suite id="s1" name="Tc2" source="C:\Users\internntrantuyen\Documents\robotfr\tc2.robot">
+<test id="s1-t1" name="TC1">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>executable_path=C:/Users/internntrantuyen/Documents/Selenium/SeDrivers/chromedriver.exe</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20220104 11:08:26.978" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20220104 11:08:26.978" endtime="20220104 11:08:28.575"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${website}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220104 11:08:28.576" level="INFO">Opening browser 'Chrome' to base url 'https://www.tutorialspoint.com/'.</msg>
+<status status="PASS" starttime="20220104 11:08:28.575" endtime="20220104 11:08:34.869"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220104 11:08:34.870" endtime="20220104 11:08:34.999"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220104 11:08:35.001" endtime="20220104 11:08:37.714"/>
+</kw>
+<status status="PASS" starttime="20220104 11:08:26.977" endtime="20220104 11:08:37.715"/>
+</test>
+<test id="s1-t2" name="TC2">
+<kw name="Set Variable" library="BuiltIn">
+<var>${a}</var>
+<arg>Hi</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220104 11:08:37.717" level="INFO">${a} = Hi</msg>
+<status status="PASS" starttime="20220104 11:08:37.717" endtime="20220104 11:08:37.717"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${a}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220104 11:08:37.718" endtime="20220104 11:08:37.718"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${b}</var>
+<arg>If ${number}&gt;0 Yes No</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20220104 11:08:37.719" level="INFO">${b} = If 100&gt;0 Yes No</msg>
+<status status="PASS" starttime="20220104 11:08:37.719" endtime="20220104 11:08:37.719"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${b}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220104 11:08:37.720" endtime="20220104 11:08:37.720"/>
+</kw>
+<status status="PASS" starttime="20220104 11:08:37.716" endtime="20220104 11:08:37.721"/>
+</test>
+<status status="PASS" starttime="20220104 11:08:26.710" endtime="20220104 11:08:37.722"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Tc2">Tc2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
