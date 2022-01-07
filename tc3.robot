@@ -33,12 +33,12 @@ TC1
    Sleep    3
    ${month}    Get Text    xpath=.//*[@class="uitk-calendar"]//h2
    ${target_month}     Get Current Date    result_format=%B %Y
-   ${target_day.day}     Get Current Date    result_format=%d
+   ${target_day}     Get Current Date    result_format=datetime
    Log To Console    ${target_day.day}
    Log To Console    ${month}
    Log To Console    ${target_month}
    IF   '${month}' == '${target_month}'
-   Click Button    xpath=.//*[@data-day="+${target_day.day}+"]
+   Click Button    xpath=.//*[@data-day="${target_day.day}"]
    ELSE
    Click Button    ${previous_click}
    Sleep    2 
