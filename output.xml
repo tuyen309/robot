@@ -1,191 +1,181 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.1 (Python 3.10.0 on win32)" generated="20220106 11:39:04.375" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.1 (Python 3.10.0 on win32)" generated="20220107 09:52:09.673" rpa="false" schemaversion="2">
 <suite id="s1" name="Tc3" source="C:\Users\internntrantuyen\Documents\robot\tc3.robot">
 <test id="s1-t1" name="TC1">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220106 11:39:04.752" level="INFO">Opening browser 'Chrome' to base url 'https://www.expedia.com/'.</msg>
-<status status="PASS" starttime="20220106 11:39:04.752" endtime="20220106 11:39:40.599"/>
+<msg timestamp="20220107 09:52:09.956" level="INFO">Opening browser 'Chrome' to base url 'https://www.expedia.com/'.</msg>
+<status status="PASS" starttime="20220107 09:52:09.956" endtime="20220107 09:52:40.726"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=.//button[contains(string(),"More travel")]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220106 11:39:40.601" level="INFO">Clicking element 'xpath=.//button[contains(string(),"More travel")]'.</msg>
-<status status="PASS" starttime="20220106 11:39:40.600" endtime="20220106 11:39:40.728"/>
+<msg timestamp="20220107 09:52:40.727" level="INFO">Clicking element 'xpath=.//button[contains(string(),"More travel")]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220107 09:52:41.077" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220107 09:52:40.746" endtime="20220107 09:52:41.077"/>
+</kw>
+<msg timestamp="20220107 09:52:41.083" level="FAIL">Element with locator 'xpath=.//button[contains(string(),"More travel")]' not found.</msg>
+<status status="FAIL" starttime="20220107 09:52:40.726" endtime="20220107 09:52:41.083"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220106 11:39:45.740" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20220106 11:39:40.729" endtime="20220106 11:39:45.740"/>
+<status status="NOT RUN" starttime="20220107 09:52:41.084" endtime="20220107 09:52:41.084"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=.//a[@href="/Flights"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220106 11:39:45.742" level="INFO">Clicking element 'xpath=.//a[@href="/Flights"]'.</msg>
-<status status="PASS" starttime="20220106 11:39:45.742" endtime="20220106 11:39:46.894"/>
+<status status="NOT RUN" starttime="20220107 09:52:41.085" endtime="20220107 09:52:41.085"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>45s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220106 11:40:31.902" level="INFO">Slept 45 seconds</msg>
-<status status="PASS" starttime="20220106 11:39:46.894" endtime="20220106 11:40:31.902"/>
+<status status="NOT RUN" starttime="20220107 09:52:41.085" endtime="20220107 09:52:41.086"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=.//button[@aria-label="Leaving from"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220106 11:40:31.903" level="INFO">Clicking element 'xpath=.//button[@aria-label="Leaving from"]'.</msg>
-<status status="PASS" starttime="20220106 11:40:31.902" endtime="20220106 11:40:32.026"/>
+<status status="NOT RUN" starttime="20220107 09:52:41.086" endtime="20220107 09:52:41.086"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>xpath=.//input[@placeholder="Where are you leaving from?"]</arg>
 <arg>${leaving_from}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220106 11:40:32.031" level="INFO">Typing text 'Ha Noi' into text field 'xpath=.//input[@placeholder="Where are you leaving from?"]'.</msg>
-<status status="PASS" starttime="20220106 11:40:32.030" endtime="20220106 11:40:32.228"/>
+<status status="NOT RUN" starttime="20220107 09:52:41.086" endtime="20220107 09:52:41.087"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220106 11:40:34.230" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220106 11:40:32.228" endtime="20220106 11:40:34.230"/>
+<status status="NOT RUN" starttime="20220107 09:52:41.087" endtime="20220107 09:52:41.088"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=${Local_HaNoi}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220106 11:40:34.233" level="INFO">Clicking element 'xpath=.//ul[@class='no-bullet']//button[contains(string(), 'Noi Bai')]'.</msg>
-<status status="PASS" starttime="20220106 11:40:34.231" endtime="20220106 11:40:34.437"/>
+<status status="NOT RUN" starttime="20220107 09:52:41.088" endtime="20220107 09:52:41.088"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220106 11:40:39.454" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20220106 11:40:34.439" endtime="20220106 11:40:39.454"/>
+<status status="NOT RUN" starttime="20220107 09:52:41.089" endtime="20220107 09:52:41.089"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=.//button[@aria-label="Going to"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220106 11:40:39.455" level="INFO">Clicking element 'xpath=.//button[@aria-label="Going to"]'.</msg>
-<status status="PASS" starttime="20220106 11:40:39.454" endtime="20220106 11:40:39.537"/>
+<status status="NOT RUN" starttime="20220107 09:52:41.090" endtime="20220107 09:52:41.090"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>xpath=.//input[@placeholder="Where are you going to?"]</arg>
 <arg>${Going_to}</arg>
 <arg>/ENTER</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220106 11:40:39.542" level="INFO">Typing text 'Ho Chi Minh City' into text field 'xpath=.//input[@placeholder="Where are you going to?"]'.</msg>
-<status status="PASS" starttime="20220106 11:40:39.542" endtime="20220106 11:40:39.920"/>
+<status status="NOT RUN" starttime="20220107 09:52:41.090" endtime="20220107 09:52:41.090"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220106 11:40:42.934" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220106 11:40:39.922" endtime="20220106 11:40:42.934"/>
+<status status="NOT RUN" starttime="20220107 09:52:41.091" endtime="20220107 09:52:41.091"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id:d1-btn</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220106 11:40:42.935" level="INFO">Clicking button 'id:d1-btn'.</msg>
-<status status="PASS" starttime="20220106 11:40:42.934" endtime="20220106 11:40:43.090"/>
+<status status="NOT RUN" starttime="20220107 09:52:41.091" endtime="20220107 09:52:41.092"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220106 11:40:46.106" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220106 11:40:43.092" endtime="20220106 11:40:46.106"/>
+<status status="NOT RUN" starttime="20220107 09:52:41.092" endtime="20220107 09:52:41.092"/>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${month}</var>
 <arg>xpath=.//*[@class="uitk-calendar"]//h2</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220106 11:40:46.141" level="INFO">${month} = January 2022</msg>
-<status status="PASS" starttime="20220106 11:40:46.106" endtime="20220106 11:40:46.141"/>
+<status status="NOT RUN" starttime="20220107 09:52:41.094" endtime="20220107 09:52:41.094"/>
 </kw>
-<kw name="Convert Date" library="DateTime">
-<var>${datetime}</var>
-<arg>20220106 09:15:00</arg>
-<arg>result_format = %d %m %Y %I:%M %p</arg>
-<doc>Converts between supported `date formats`.</doc>
-<msg timestamp="20220106 11:40:46.145" level="INFO">${datetime} = result_format = 06 01 2022 09:15 AM</msg>
-<status status="PASS" starttime="20220106 11:40:46.142" endtime="20220106 11:40:46.145"/>
+<kw name="Get Current Date" library="DateTime">
+<var>${target_month}</var>
+<arg>result_format=%B %Y</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="NOT RUN" starttime="20220107 09:52:41.095" endtime="20220107 09:52:41.095"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${datetime}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220106 11:40:46.146" endtime="20220106 11:40:46.146"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${today}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220106 11:40:46.147" endtime="20220106 11:40:46.148"/>
+<kw name="Get Current Date" library="DateTime">
+<var>${target_day}</var>
+<arg>result_format=%D</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="NOT RUN" starttime="20220107 09:52:41.096" endtime="20220107 09:52:41.096"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${month}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220106 11:40:46.148" endtime="20220106 11:40:46.149"/>
+<status status="NOT RUN" starttime="20220107 09:52:41.096" endtime="20220107 09:52:41.096"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${target_month}</arg>
 <doc>Logs the given message to the console.</doc>
-<msg timestamp="20220106 11:40:46.152" level="FAIL">Variable '${target_month}' not found.</msg>
-<status status="FAIL" starttime="20220106 11:40:46.149" endtime="20220106 11:40:46.152"/>
+<status status="NOT RUN" starttime="20220107 09:52:41.097" endtime="20220107 09:52:41.097"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${target_day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220107 09:52:41.097" endtime="20220107 09:52:41.097"/>
 </kw>
 <if>
 <branch type="IF" condition="${month}">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>xpath=.//*[@data-day="+${target_day}+"]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220106 11:40:46.153" endtime="20220106 11:40:46.153"/>
+<status status="NOT RUN" starttime="20220107 09:52:41.098" endtime="20220107 09:52:41.098"/>
 </kw>
-<status status="NOT RUN" starttime="20220106 11:40:46.152" endtime="20220106 11:40:46.153"/>
+<status status="NOT RUN" starttime="20220107 09:52:41.098" endtime="20220107 09:52:41.098"/>
 </branch>
 <branch type="ELSE">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>${previous_click}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220106 11:40:46.153" endtime="20220106 11:40:46.153"/>
+<status status="NOT RUN" starttime="20220107 09:52:41.098" endtime="20220107 09:52:41.099"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20220106 11:40:46.153" endtime="20220106 11:40:46.153"/>
+<status status="NOT RUN" starttime="20220107 09:52:41.099" endtime="20220107 09:52:41.099"/>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${month}</var>
 <arg>/xpath=.//*[@class="uitk-calendar"]//h2</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220106 11:40:46.154" endtime="20220106 11:40:46.154"/>
+<status status="NOT RUN" starttime="20220107 09:52:41.099" endtime="20220107 09:52:41.099"/>
 </kw>
 <kw name="IF ${month} == ${target_month}">
-<status status="NOT RUN" starttime="20220106 11:40:46.157" endtime="20220106 11:40:46.158"/>
+<status status="NOT RUN" starttime="20220107 09:52:41.107" endtime="20220107 09:52:41.107"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=.//*[@data-day="+${target_day}+"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220106 11:40:46.158" endtime="20220106 11:40:46.158"/>
+<status status="NOT RUN" starttime="20220107 09:52:41.107" endtime="20220107 09:52:41.107"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=.//button[@data-stid="apply-date-picker"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220106 11:40:46.158" endtime="20220106 11:40:46.158"/>
+<status status="NOT RUN" starttime="20220107 09:52:41.108" endtime="20220107 09:52:41.108"/>
 </kw>
-<status status="NOT RUN" starttime="20220106 11:40:46.153" endtime="20220106 11:40:46.158"/>
+<status status="NOT RUN" starttime="20220107 09:52:41.098" endtime="20220107 09:52:41.108"/>
 </branch>
-<status status="NOT RUN" starttime="20220106 11:40:46.152" endtime="20220106 11:40:46.158"/>
+<status status="NOT RUN" starttime="20220107 09:52:41.098" endtime="20220107 09:52:41.108"/>
 </if>
 <kw name="End" library="Reserved">
-<status status="NOT RUN" starttime="20220106 11:40:46.159" endtime="20220106 11:40:46.159"/>
+<status status="NOT RUN" starttime="20220107 09:52:41.109" endtime="20220107 09:52:41.110"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>xpath=.//button[@data-testid="submit-button"]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220106 11:40:46.159" endtime="20220106 11:40:46.159"/>
+<status status="NOT RUN" starttime="20220107 09:52:41.111" endtime="20220107 09:52:41.111"/>
 </kw>
-<status status="FAIL" starttime="20220106 11:39:04.751" endtime="20220106 11:40:46.160">Variable '${target_month}' not found.</status>
+<status status="FAIL" starttime="20220107 09:52:09.955" endtime="20220107 09:52:41.112">Element with locator 'xpath=.//button[contains(string(),"More travel")]' not found.</status>
 </test>
-<status status="FAIL" starttime="20220106 11:39:04.377" endtime="20220106 11:40:46.161"/>
+<status status="FAIL" starttime="20220107 09:52:09.676" endtime="20220107 09:52:41.121"/>
 </suite>
 <statistics>
 <total>
