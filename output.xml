@@ -1,181 +1,189 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.1 (Python 3.10.0 on win32)" generated="20220107 09:52:09.673" rpa="false" schemaversion="2">
-<suite id="s1" name="Tc3" source="C:\Users\internntrantuyen\Documents\robot\tc3.robot">
+<robot generator="Robot 4.1.3 (Python 3.10.1 on win32)" generated="20220109 20:39:00.338" rpa="false" schemaversion="2">
+<suite id="s1" name="Tc4" source="D:\robot\tc4.robot">
 <test id="s1-t1" name="TC1">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220107 09:52:09.956" level="INFO">Opening browser 'Chrome' to base url 'https://www.expedia.com/'.</msg>
-<status status="PASS" starttime="20220107 09:52:09.956" endtime="20220107 09:52:40.726"/>
+<msg timestamp="20220109 20:39:01.561" level="INFO">Opening browser 'Chrome' to base url 'https://www.expedia.com/'.</msg>
+<status status="PASS" starttime="20220109 20:39:01.558" endtime="20220109 20:39:42.067"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=.//button[contains(string(),"More travel")]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220107 09:52:40.727" level="INFO">Clicking element 'xpath=.//button[contains(string(),"More travel")]'.</msg>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220107 09:52:41.077" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220107 09:52:40.746" endtime="20220107 09:52:41.077"/>
-</kw>
-<msg timestamp="20220107 09:52:41.083" level="FAIL">Element with locator 'xpath=.//button[contains(string(),"More travel")]' not found.</msg>
-<status status="FAIL" starttime="20220107 09:52:40.726" endtime="20220107 09:52:41.083"/>
+<msg timestamp="20220109 20:39:42.072" level="INFO">Clicking element 'xpath=.//button[contains(string(),"More travel")]'.</msg>
+<status status="PASS" starttime="20220109 20:39:42.071" endtime="20220109 20:39:42.827"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20220107 09:52:41.084" endtime="20220107 09:52:41.084"/>
+<msg timestamp="20220109 20:39:47.834" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220109 20:39:42.831" endtime="20220109 20:39:47.834"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=.//a[@href="/Flights"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220107 09:52:41.085" endtime="20220107 09:52:41.085"/>
+<msg timestamp="20220109 20:39:47.837" level="INFO">Clicking element 'xpath=.//a[@href="/Flights"]'.</msg>
+<status status="PASS" starttime="20220109 20:39:47.836" endtime="20220109 20:39:52.362"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>45s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20220107 09:52:41.085" endtime="20220107 09:52:41.086"/>
+<msg timestamp="20220109 20:40:37.374" level="INFO">Slept 45 seconds</msg>
+<status status="PASS" starttime="20220109 20:39:52.363" endtime="20220109 20:40:37.375"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=.//button[@aria-label="Leaving from"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220107 09:52:41.086" endtime="20220107 09:52:41.086"/>
+<msg timestamp="20220109 20:40:37.384" level="INFO">Clicking element 'xpath=.//button[@aria-label="Leaving from"]'.</msg>
+<status status="PASS" starttime="20220109 20:40:37.383" endtime="20220109 20:40:48.436"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>xpath=.//input[@placeholder="Where are you leaving from?"]</arg>
 <arg>${leaving_from}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220107 09:52:41.086" endtime="20220107 09:52:41.087"/>
+<msg timestamp="20220109 20:40:48.439" level="INFO">Typing text 'Ha Noi' into text field 'xpath=.//input[@placeholder="Where are you leaving from?"]'.</msg>
+<status status="PASS" starttime="20220109 20:40:48.438" endtime="20220109 20:40:52.693"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20220107 09:52:41.087" endtime="20220107 09:52:41.088"/>
+<msg timestamp="20220109 20:40:54.712" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220109 20:40:52.697" endtime="20220109 20:40:54.713"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=${Local_HaNoi}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220107 09:52:41.088" endtime="20220107 09:52:41.088"/>
+<msg timestamp="20220109 20:40:54.719" level="INFO">Clicking element 'xpath=.//ul[@class='no-bullet']//button[contains(string(), 'Noi Bai')]'.</msg>
+<status status="PASS" starttime="20220109 20:40:54.716" endtime="20220109 20:40:55.582"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20220107 09:52:41.089" endtime="20220107 09:52:41.089"/>
+<msg timestamp="20220109 20:41:00.637" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220109 20:40:55.601" endtime="20220109 20:41:00.637"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>xpath=.//button[@aria-label="Going to"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220107 09:52:41.090" endtime="20220107 09:52:41.090"/>
+<msg timestamp="20220109 20:41:00.783" level="INFO">Clicking element 'xpath=.//button[@aria-label="Going to"]'.</msg>
+<status status="PASS" starttime="20220109 20:41:00.782" endtime="20220109 20:41:01.227"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>xpath=.//input[@placeholder="Where are you going to?"]</arg>
 <arg>${Going_to}</arg>
-<arg>/ENTER</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220107 09:52:41.090" endtime="20220107 09:52:41.090"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20220107 09:52:41.091" endtime="20220107 09:52:41.091"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>id:d1-btn</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220107 09:52:41.091" endtime="20220107 09:52:41.092"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20220107 09:52:41.092" endtime="20220107 09:52:41.092"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${month}</var>
-<arg>xpath=.//*[@class="uitk-calendar"]//h2</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220107 09:52:41.094" endtime="20220107 09:52:41.094"/>
-</kw>
-<kw name="Get Current Date" library="DateTime">
-<var>${target_month}</var>
-<arg>result_format=%B %Y</arg>
-<doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="NOT RUN" starttime="20220107 09:52:41.095" endtime="20220107 09:52:41.095"/>
-</kw>
-<kw name="Get Current Date" library="DateTime">
-<var>${target_day}</var>
-<arg>result_format=%D</arg>
-<doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="NOT RUN" starttime="20220107 09:52:41.096" endtime="20220107 09:52:41.096"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${month}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20220107 09:52:41.096" endtime="20220107 09:52:41.096"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${target_month}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20220107 09:52:41.097" endtime="20220107 09:52:41.097"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${target_day}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20220107 09:52:41.097" endtime="20220107 09:52:41.097"/>
-</kw>
-<if>
-<branch type="IF" condition="${month}">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>xpath=.//*[@data-day="+${target_day}+"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220107 09:52:41.098" endtime="20220107 09:52:41.098"/>
-</kw>
-<status status="NOT RUN" starttime="20220107 09:52:41.098" endtime="20220107 09:52:41.098"/>
-</branch>
-<branch type="ELSE">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${previous_click}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220107 09:52:41.098" endtime="20220107 09:52:41.099"/>
+<msg timestamp="20220109 20:41:01.229" level="INFO">Typing text 'Da Nang' into text field 'xpath=.//input[@placeholder="Where are you going to?"]'.</msg>
+<status status="PASS" starttime="20220109 20:41:01.228" endtime="20220109 20:41:01.819"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20220107 09:52:41.099" endtime="20220107 09:52:41.099"/>
+<msg timestamp="20220109 20:41:03.831" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220109 20:41:01.820" endtime="20220109 20:41:03.832"/>
 </kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=${Local_DaNang}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220109 20:41:03.837" level="INFO">Clicking element 'xpath=.//ul[@class='no-bullet']//button[contains(string(), 'Da Nang')]'.</msg>
+<status status="PASS" starttime="20220109 20:41:03.835" endtime="20220109 20:41:04.572"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220109 20:41:07.579" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220109 20:41:04.573" endtime="20220109 20:41:07.579"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=.//button[contains(text(), 'Search')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220109 20:41:07.581" level="INFO">Clicking element 'xpath=.//button[contains(text(), 'Search')]'.</msg>
+<status status="PASS" starttime="20220109 20:41:07.580" endtime="20220109 20:41:21.644"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>30</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220109 20:41:51.664" level="INFO">Slept 30 seconds</msg>
+<status status="PASS" starttime="20220109 20:41:21.649" endtime="20220109 20:41:51.664"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=.//select[@id="listings-sort"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220109 20:41:51.670" level="INFO">Clicking element 'xpath=.//select[@id="listings-sort"]'.</msg>
+<status status="PASS" starttime="20220109 20:41:51.668" endtime="20220109 20:41:52.205"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220109 20:41:53.221" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220109 20:41:52.210" endtime="20220109 20:41:53.226"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=.//select[@id="listings-sort"]/option[contains(string(), "Price (Lowest)")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220109 20:41:53.232" level="INFO">Clicking element 'xpath=.//select[@id="listings-sort"]/option[contains(string(), "Price (Lowest)")]'.</msg>
+<status status="PASS" starttime="20220109 20:41:53.231" endtime="20220109 20:41:53.424"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${i}</var>
+<value>1</value>
+<value>9</value>
+<iter>
+<var name="${i}">1</var>
 <kw name="Get Text" library="SeleniumLibrary">
-<var>${month}</var>
-<arg>/xpath=.//*[@class="uitk-calendar"]//h2</arg>
+<var>${Priceitem}</var>
+<arg>xpath=.//ul/li[${i}]//span[@class="uitk-lockup-price"]</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220107 09:52:41.099" endtime="20220107 09:52:41.099"/>
+<msg timestamp="20220109 20:41:53.524" level="INFO">${Priceitem} = $108</msg>
+<status status="PASS" starttime="20220109 20:41:53.426" endtime="20220109 20:41:53.524"/>
 </kw>
-<kw name="IF ${month} == ${target_month}">
-<status status="NOT RUN" starttime="20220107 09:52:41.107" endtime="20220107 09:52:41.107"/>
+<kw name="Split String">
+<var>${Priceitem}</var>
+<arg>${Priceitem}</arg>
+<arg>$</arg>
+<msg timestamp="20220109 20:41:53.535" level="FAIL">No keyword with name 'Split String' found.</msg>
+<status status="FAIL" starttime="20220109 20:41:53.534" endtime="20220109 20:41:53.535"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=.//*[@data-day="+${target_day}+"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220107 09:52:41.107" endtime="20220107 09:52:41.107"/>
+<kw name="${Priceitem}[1]">
+<var>${Priceitem}</var>
+<status status="NOT RUN" starttime="20220109 20:41:53.548" endtime="20220109 20:41:53.548"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=.//button[@data-stid="apply-date-picker"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220107 09:52:41.108" endtime="20220107 09:52:41.108"/>
+<kw name="Append To List">
+<arg>@{pricelist}</arg>
+<arg>${Priceitem}</arg>
+<status status="NOT RUN" starttime="20220109 20:41:53.560" endtime="20220109 20:41:53.560"/>
 </kw>
-<status status="NOT RUN" starttime="20220107 09:52:41.098" endtime="20220107 09:52:41.108"/>
+<status status="FAIL" starttime="20220109 20:41:53.425" endtime="20220109 20:41:53.560"/>
+</iter>
+<status status="FAIL" starttime="20220109 20:41:53.425" endtime="20220109 20:41:53.561"/>
+</for>
+<kw name="xpath=.//div[@data-test-id=&quot;arrival-departure&quot;]">
+<var>${verify_local}</var>
+<status status="NOT RUN" starttime="20220109 20:41:53.576" endtime="20220109 20:41:53.576"/>
+</kw>
+<if>
+<branch type="IF" condition="'${verify_local}' == '${verify_mess}'">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Pass</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220109 20:41:53.578" endtime="20220109 20:41:53.578"/>
+</kw>
+<status status="NOT RUN" starttime="20220109 20:41:53.577" endtime="20220109 20:41:53.578"/>
 </branch>
-<status status="NOT RUN" starttime="20220107 09:52:41.098" endtime="20220107 09:52:41.108"/>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Fail</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220109 20:41:53.579" endtime="20220109 20:41:53.579"/>
+</kw>
+<status status="NOT RUN" starttime="20220109 20:41:53.578" endtime="20220109 20:41:53.579"/>
+</branch>
+<status status="NOT RUN" starttime="20220109 20:41:53.577" endtime="20220109 20:41:53.579"/>
 </if>
-<kw name="End" library="Reserved">
-<status status="NOT RUN" starttime="20220107 09:52:41.109" endtime="20220107 09:52:41.110"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>xpath=.//button[@data-testid="submit-button"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220107 09:52:41.111" endtime="20220107 09:52:41.111"/>
-</kw>
-<status status="FAIL" starttime="20220107 09:52:09.955" endtime="20220107 09:52:41.112">Element with locator 'xpath=.//button[contains(string(),"More travel")]' not found.</status>
+<status status="FAIL" starttime="20220109 20:39:01.552" endtime="20220109 20:41:53.581">No keyword with name 'Split String' found.</status>
 </test>
-<status status="FAIL" starttime="20220107 09:52:09.676" endtime="20220107 09:52:41.121"/>
+<status status="FAIL" starttime="20220109 20:39:00.345" endtime="20220109 20:41:53.585"/>
 </suite>
 <statistics>
 <total>
@@ -184,7 +192,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Tc3">Tc3</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tc4">Tc4</stat>
 </suite>
 </statistics>
 <errors>
