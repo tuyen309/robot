@@ -57,12 +57,13 @@ TC1
    Sleep    3
    Click Element     xpath=.//button[contains(text(), 'Search')]    
    Sleep    30
-   ${verify_local}    Get Text     xpath=.//div[@data-test-id="arrival-departure"]
-   IF    '${verify_local}' == '${verify_mess}'
-   Log To Console    Pass
-   ELSE
-   Log To Console    Fail
-   END
+   FOR    ${i}    IN RANGE    1    9
+        ${verify_local}    Get Text    xpath=.//ul/li[${i}]//div[@data-test-id="arrival-departure"]
+        IF    '${verify_local}' == '${verify_mess}'
+            Log To Console    OK   
+        END      
+    END
+    
     
     
 

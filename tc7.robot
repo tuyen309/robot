@@ -37,28 +37,33 @@ TC1
    Sleep    30
    Click Element    xpath=.//select[@id="listings-sort"]
    Sleep    1
-   Click Element    xpath=.//select[@id="listings-sort"]/option[contains(string(), "Price (Lowest)")]
-   @{pricelist}=    Create List
+   Click Element    xpath=.//select[@id="listings-sort"]/option[contains(string(), "Duration (Longest)")]
+   @{timelist}=    Create List
    FOR    ${i}    IN RANGE    1    9
-       ${Priceitem}     Get Text    xpath=.//ul/li[${i}]//span[@class="uitk-lockup-price"]
-       ${Priceitems}=     Split String    ${Priceitem}    $
-       ${Priceitem_addlist}=    Get From List    ${Priceitems}    1
-       Append To List    ${pricelist}    ${Priceitem_addlist}
+       ${time}     Get Text    xpath=.//ul/li[${i}]//div[@data-test-id="journey-duration"]
+       ${times}=     Split String    ${time}    
+       ${time_h}=    Get From List    ${times}    0
+       ${time_h}=    Split String    ${time_h}   h
+       ${time_h}=    Get From List    ${time_h}    0
+       ${time_m}=    Get From List    ${times}    1
+       ${time_m}=    Split String    ${time_m}    m
+       ${time_m}=    Get From List    ${time_m}    0
+       ${time_h}=    Evaluate    ${time_h} * 60
+       ${time_target}=    Evaluate    ${time_h} + ${time_m}
+       Append To List    ${timelist}    ${time_target}
+  
     END   
  
-   # FOR    ${j}    IN RANGE    1    9
-   #    ${verify_local}    Get Text    xpath=.//ul/li[${j}]//div[@data-test-id="arrival-departure"]
-   # END    
-   ${length_list}=  Get length   ${pricelist}
+   ${length_list}=  Get length   ${timelist}
    # ${verify_local}    xpath=.//div[@data-test-id="arrival-departure"]
    
    # IF    '${verify_local}' == '${verify_mess}'
       FOR    ${i}    IN RANGE    ${length_list}
          FOR   ${j}    IN RANGE    ${i}+1    ${length_list}-1
-            ${pricelist_i}    Get From List    ${pricelist}    ${i}
-            ${pricelist_j}    Get From List    ${pricelist}    ${j}
-            ${verify_local}    Get Text    xpath=.//ul/li[${j}]//div[@data-test-id="arrival-departure"]
-            IF    '${pricelist_i}' <= '${pricelist_j}'
+            ${timelist_i}    Get From List    ${timelist}    ${i}
+            ${timelist_j}    Get From List    ${timelist}    ${j}
+            ${verify_local}    Get Text    xpath=.//ul[@data-test-id="listings"]/li[${j}]//div[@data-test-id="journey-duration"]
+            IF    '${timelist_i}'  >= '${timelist_j}'
                IF    '${verify_local}' == '${verify_mess}'
                Log To Console    OK   
                END   
