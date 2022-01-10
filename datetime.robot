@@ -8,7 +8,7 @@ Library    Collections
 *** Test Cases ***
 TC1
    @{timelist}=    Create List
-   ${time}    Set Variable    1h 20m (Nonstop)
+   ${time}    Set Variable    13h 25m (1 stop)
    ${times}=     Split String    ${time}    
    ${time_h}=    Get From List    ${times}    0
    ${time_h}=    Split String    ${time_h}   h

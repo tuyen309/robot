@@ -62,7 +62,7 @@ TC1
          FOR   ${j}    IN RANGE    ${i}+1    ${length_list}-1
             ${timelist_i}    Get From List    ${timelist}    ${i}
             ${timelist_j}    Get From List    ${timelist}    ${j}
-            ${verify_local}    Get Text    xpath=.//ul[@data-test-id="listings"]/li[${j}]//div[@data-test-id="journey-duration"]
+            ${verify_local}    Get Text    xpath=.//ul/li[${j}]//div[@data-test-id="arrival-departure"]
             IF    '${timelist_i}'  >= '${timelist_j}'
                IF    '${verify_local}' == '${verify_mess}'
                Log To Console    OK   
