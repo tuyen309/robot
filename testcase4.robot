@@ -17,7 +17,7 @@ ${verify_mess}    Hanoi (HAN) - Da Nang (DAD)
 
 
 *** Test Cases ***
-TC1
+TC4
    Open Browser		${URL}		${BROWSER}
    Click Element    xpath=.//button[contains(string(),"More travel")]
    Sleep  5s
@@ -38,6 +38,7 @@ TC1
    Click Element    xpath=.//select[@id="listings-sort"]
    Sleep    1
    Click Element    xpath=.//select[@id="listings-sort"]/option[contains(string(), "Duration (Shortest)")]
+   Sleep    5
    @{timelist}=    Create List
    FOR    ${i}    IN RANGE    1    9
        ${time}     Get Text    xpath=.//ul[@data-test-id="listings"]/li[${i}]//div[@data-test-id="journey-duration"]
@@ -58,12 +59,12 @@ TC1
    # ${verify_local}    xpath=.//div[@data-test-id="arrival-departure"]
    
    # IF    '${verify_local}' == '${verify_mess}'
-      FOR    ${i}    IN RANGE    ${length_list}
-         FOR   ${j}    IN RANGE    ${i}+1    ${length_list}-1
+      FOR    ${i}    IN RANGE    ${length_list}-1
+         FOR   ${j}    IN RANGE    ${i}+1    ${length_list}
             ${timelist_i}    Get From List    ${timelist}    ${i}
             ${timelist_j}    Get From List    ${timelist}    ${j}
             ${verify_local}    Get Text    xpath=.//ul/li[${j}]//div[@data-test-id="arrival-departure"]
-            IF    '${timelist_i}'  <= '${timelist_j}'
+            IF    '${timelist_i}' <= '${timelist_j}'
                IF    '${verify_local}' == '${verify_mess}'
                Log To Console    OK   
                END   

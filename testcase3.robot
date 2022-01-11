@@ -17,7 +17,7 @@ ${verify_mess}    Hanoi (HAN) - Da Nang (DAD)
 
 
 *** Test Cases ***
-TC1
+TC3
    Open Browser		${URL}		${BROWSER}
    Click Element    xpath=.//button[contains(string(),"More travel")]
    Sleep  5s
@@ -37,7 +37,8 @@ TC1
    Sleep    30
    Click Element    xpath=.//select[@id="listings-sort"]
    Sleep    1
-   Click Element    xpath=.//select[@id="listings-sort"]/option[contains(string(), "Price (Lowest)")]
+   Click Element    xpath=.//select[@id="listings-sort"]/option[contains(string(), "Price (Highest)")]
+   Sleep    6
    @{pricelist}=    Create List
    FOR    ${i}    IN RANGE    1    9
        ${Priceitem}     Get Text    xpath=.//ul/li[${i}]//span[@class="uitk-lockup-price"]
@@ -53,12 +54,12 @@ TC1
    # ${verify_local}    xpath=.//div[@data-test-id="arrival-departure"]
    
    # IF    '${verify_local}' == '${verify_mess}'
-      FOR    ${i}    IN RANGE    ${length_list}
-         FOR   ${j}    IN RANGE    ${i}+1    ${length_list}-1
+      FOR    ${i}    IN RANGE    ${length_list}-1
+         FOR   ${j}    IN RANGE    ${i}+1    ${length_list}
             ${pricelist_i}    Get From List    ${pricelist}    ${i}
             ${pricelist_j}    Get From List    ${pricelist}    ${j}
             ${verify_local}    Get Text    xpath=.//ul/li[${j}]//div[@data-test-id="arrival-departure"]
-            IF    '${pricelist_i}' <= '${pricelist_j}'
+            IF    '${pricelist_i}' >= '${pricelist_j}'
                IF    '${verify_local}' == '${verify_mess}'
                Log To Console    OK   
                END   
